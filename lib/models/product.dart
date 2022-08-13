@@ -18,10 +18,11 @@ class Product {
   });
 
   factory Product.parseJSON(Map<String, dynamic> data) {
+    print(data['price']);
     return Product(
       id: data['id'],
       title: data['title'],
-      price: data['price'],
+      price: data['price'] != null ? double.parse('${data['price']}') : null,
       description: data['description'],
       category: data['category'],
       image: data['image'],
@@ -38,7 +39,7 @@ class Rating {
 
   factory Rating.parseJSON(Map<String, dynamic> data) {
     return Rating(
-      rate: data['rate'] ?? 0.0,
+      rate: data['rate'] != null ? double.parse('${data['rate']}') : 0.0,
       count: data['count'] ?? 0,
     );
   }

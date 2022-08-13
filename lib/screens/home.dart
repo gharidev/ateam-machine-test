@@ -1,5 +1,7 @@
-import 'package:ateam_machine_test/screens/products.dart';
 import 'package:flutter/material.dart';
+
+import './settings.dart';
+import './products.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -28,7 +30,9 @@ class HomeScreen extends StatelessWidget {
             child: ListTile(
               title: const Text('Settings Page (UI Section)'),
               onTap: () {
-                // Navigator.of(context);
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => SettingsScreen()),
+                );
               },
             ),
           )

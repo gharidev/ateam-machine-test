@@ -17,9 +17,11 @@ class MyApp extends StatelessWidget {
       create: (_) => ProductsProvider(),
       child: MaterialApp(
         title: 'ATeam Machine Test',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
           fontFamily: 'Montserrat',
+          backgroundColor: Colors.grey.shade200,
         ),
         home: const HomeScreen(),
       ),

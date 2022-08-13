@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ateam_machine_test">
+   <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="ateam_machine_test"
+        android:label="ATeam Machine Test"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
